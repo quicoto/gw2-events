@@ -58,4 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('#events-form input[type="checkbox"]').forEach(cb => {
     cb.addEventListener('change', saveState);
   });
+
+  const reloadIfNewDay = () => {
+    const state = readStorage();
+    if (state !== null && state.date !== getTodayString()) {
+      location.reload();
+    }
+  };
+
+  setInterval(reloadIfNewDay, 300_000);
+
+  document.addEventListener('visibilitychange', () => {
+    if (!document.hidden) reloadIfNewDay();
+  });
 });
