@@ -251,7 +251,7 @@ legend {
   font-size: 0.82rem;
   letter-spacing: 0.1em;
   line-height: 1.3;
-  color: var(--clr-text);
+  color: var(--clr-gold);
   transition: color 0.12s;
 }
 
@@ -260,6 +260,9 @@ legend {
   text-decoration: line-through;
 }
 
+.event-time {
+  margin: 0 0 .5rem 2.8rem;
+}
 
 footer {
   margin-top: 3rem;
