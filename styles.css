@@ -11,9 +11,9 @@
   --clr-text-muted:   #7a6b48;
   --clr-done-strike:  #3a3020;
   --clr-divider:      rgba(90, 66, 24, 0.35);
-  --shadow-panel:     0 4px 20px rgba(0, 0, 0, 0.7),
-                      inset 0 1px 0 rgba(200, 162, 74, 0.06);
-  --glow-gold:        0 0 10px rgba(200, 162, 74, 0.4);
+  --shadow-panel:     0 0.2rem 1rem rgba(0, 0, 0, 0.7),
+                      inset 0 0.05rem 0 rgba(200, 162, 74, 0.06);
+  --glow-gold:        0 0 0.5rem rgba(200, 162, 74, 0.4);
 }
 
 /* cinzel-regular - latin */
@@ -58,7 +58,7 @@
 }
 
 html {
-  font-size: 20px;
+  font-size: 23px;
 }
 
 /* ── Body ───────────────────────────────────────────────────── */
@@ -75,13 +75,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem 5rem;
+  padding: 2rem 1rem 5rem;
 }
 
 /* ── Main Container ─────────────────────────────────────────── */
 main {
   width: 100%;
-  max-width: 540px;
+  max-width: 27rem;
 }
 
 /* ── Header ─────────────────────────────────────────────────── */
@@ -97,8 +97,8 @@ header h1 {
   color: var(--clr-gold-light);
   letter-spacing: 0.06em;
   text-shadow:
-    0 0 28px rgba(230, 195, 106, 0.45),
-    0 2px 6px rgba(0, 0, 0, 0.9);
+    0 0 1.4rem rgba(230, 195, 106, 0.45),
+    0 0.1rem 0.3rem rgba(0, 0, 0, 0.9);
 }
 
 header h1::before,
@@ -126,8 +126,8 @@ form {
 
 /* ── Event Group (Fieldset) ─────────────────────────────────── */
 fieldset.event-group {
-  border: 1px solid var(--clr-border);
-  border-radius: 3px;
+  border: 0.05rem solid var(--clr-border);
+  border-radius: 0.15rem;
   background: var(--clr-panel);
   padding: 0;
   position: relative;
@@ -139,23 +139,23 @@ fieldset.event-group::before,
 fieldset.event-group::after {
   content: '';
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 0.5rem;
+  height: 0.5rem;
   border-color: var(--clr-gold);
   border-style: solid;
   opacity: 0.65;
 }
 
 fieldset.event-group::before {
-  top: -10px;
-  left: -1px;
-  border-width: 2px 0 0 2px;
+  top: -0.5rem;
+  left: -0.05rem;
+  border-width: 0.1rem 0 0 0.1rem;
 }
 
 fieldset.event-group::after {
-  bottom: -1px;
-  right: -1px;
-  border-width: 0 2px 2px 0;
+  bottom: -0.05rem;
+  right: -0.05rem;
+  border-width: 0 0.1rem 0.1rem 0;
 }
 
 /* ── Legend ─────────────────────────────────────────────────── */
@@ -176,7 +176,7 @@ legend {
 }
 
 .event-list li + li {
-  border-top: 1px solid var(--clr-divider);
+  border-top: 0.05rem solid var(--clr-divider);
 }
 
 /* ── Label / Event Item ─────────────────────────────────────── */
@@ -208,8 +208,8 @@ legend {
   flex-shrink: 0;
   width: 1.05rem;
   height: 1.05rem;
-  border: 1px solid var(--clr-border);
-  border-radius: 2px;
+  border: 0.05rem solid var(--clr-border);
+  border-radius: 0.1rem;
   background: #0d0b08;
   position: relative;
   transition: border-color 0.12s, background 0.12s, box-shadow 0.12s;
@@ -230,11 +230,11 @@ legend {
 .event-item input[type="checkbox"]:checked ~ .checkmark::after {
   content: '';
   position: absolute;
-  left: 6px;
-  top: 1px;
-  width: 7px;
-  height: 12px;
-  border: 2px solid var(--clr-gold-light);
+  left: 0.3rem;
+  top: 0.05rem;
+  width: 0.35rem;
+  height: 0.6rem;
+  border: 0.1rem solid var(--clr-gold-light);
   border-top: none;
   border-left: none;
   transform: rotate(45deg);
@@ -242,8 +242,8 @@ legend {
 
 /* Keyboard focus ring */
 .event-item input[type="checkbox"]:focus-visible ~ .checkmark {
-  outline: 2px solid var(--clr-gold);
-  outline-offset: 2px;
+  outline: 0.1rem solid var(--clr-gold);
+  outline-offset: 0.1rem;
 }
 
 /* ── Event Name ─────────────────────────────────────────────── */
